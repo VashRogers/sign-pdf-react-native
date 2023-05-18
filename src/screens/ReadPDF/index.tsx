@@ -25,7 +25,7 @@ export default function ReadPDF () {
     const [ pageHeight, setPageHeight ] = useState(0);
 
     useEffect(() => {
-        downloadFile();
+        // downloadFile();
 
         if(signBase64){
             setSignatureArrayBuffer(_base64ToArrayBuffer(signBase64))
@@ -221,14 +221,14 @@ export default function ReadPDF () {
 
             {/* </View> */}
             
-            {/* <TouchableOpacity
+            <TouchableOpacity
                 onPress={() => downloadFile()}
                 style={styles.btnContainer}
             >
                 <Text>Baixar PDF</Text>
             </TouchableOpacity>          
             
-            <Text>Teste</Text> */}
+            <Text>Teste</Text>
         </View>
     )
 }
