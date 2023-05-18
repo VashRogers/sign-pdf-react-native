@@ -1,4 +1,9 @@
 {
   "name": "TestWithoutExpo",
-  "displayName": "TestWithoutExpo"
+  "displayName": "TestWithoutExpo",
+  "extra": {
+    "eas": {
+      "projectId": "b51d14c5-83b5-44d6-a790-11e8e27a550f"
+    }
+  }
 }
