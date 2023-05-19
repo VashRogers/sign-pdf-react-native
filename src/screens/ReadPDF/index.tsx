@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { View, Text, TouchableOpacity, StyleSheet, Dimensions, Platform } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Dimensions, Platform, Alert } from "react-native";
 
 
 import Pdf from "react-native-pdf";
@@ -8,9 +8,14 @@ import Signature from 'react-native-signature-canvas';
 import { PDFDocument } from "pdf-lib";
 import { decode, encode} from 'base-64';
 
+interface SourceTypes{
+    uri:string;
+    cache:boolean;
+}
+
 export default function ReadPDF () {
     
-    const [ pdfPath, setPdfPath ] = useState<string | null>(null);
+    const [ pdfPath, setPdfPath ] = useState<string>("");
     const [ fileDownloaded, setFileDownloaded ] = useState(false);
     const [ signaturePad, setSignaturePad ] = useState(false);
     const [ pdfEditMode, setPdfEditMode ] = useState(false);
@@ -76,6 +81,7 @@ export default function ReadPDF () {
     const downloadFile = async () => {
         if(!fileDownloaded){
             try{
+                Alert.alert('Pdf Baixado!');
                 const fileUri = FileSystem.documentDirectory + 'example.pdf';
                 const downloadUri = 'http://samples.leanpub.com/thereactnativebook-sample.pdf';
                 const { uri } = await FileSystem.downloadAsync(downloadUri, fileUri);
@@ -84,7 +90,7 @@ export default function ReadPDF () {
                 setPdfPath(uri);
                 readFile(uri);
                 setFileDownloaded(true)
-    
+                
             } catch(err) {
                 console.log('Erro ao salvar pdf: ', err);
             }
@@ -114,7 +120,7 @@ export default function ReadPDF () {
         if(pdfEditMode) {
             console.log('Entra aqui? em handleSingleTap')
             setNewPdfSaved(false);
-            setPdfPath(null);
+            setPdfPath("");
             setPdfEditMode(false);
 
             const pdfDoc = await PDFDocument.load(pdfArrayBuffer);
@@ -157,6 +163,8 @@ export default function ReadPDF () {
             
     }
 
+    let source:SourceTypes = { uri:pdfPath, cache:true };
+
     return(
         <View style={styles.container}>
 
@@ -182,7 +190,7 @@ export default function ReadPDF () {
                                         spacing={0}
                                         fitPolicy={0}
                                         enablePaging={true}
-                                        source={{uri: pdfPath}}
+                                        source={source}
                                         onLoadComplete={(numberOfPages, filePath, {width, height})=>{
                                         setPageWidth(width);
                                         setPageHeight(height);

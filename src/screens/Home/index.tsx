@@ -14,14 +14,16 @@ export default function HomeScreen() {
                 style={{ backgroundColor:'red', padding:8, borderRadius:8, }}
                 onPress={() => navigation.navigate('AnotherScreen')}
             >
-                <Text style={{ fontSize:16, color:'white', fontWeight:'bold' }}>Go To another Screen</Text>
+                <Text style={{ fontSize:16, color:'white', fontWeight:'bold' }}>Go To READ PDF</Text>
             </TouchableOpacity>
+
             <View style={{ height:'5%' }} />
+            
             <TouchableOpacity 
                 style={{ backgroundColor:'gray', padding:8, borderRadius:8, }}
                 onPress={() => navigation.navigate('ReadPDF')}
             >
-                <Text style={{ fontSize:16, color:'white', fontWeight:'bold' }}>Go To another Screen</Text>
+                <Text style={{ fontSize:16, color:'white', fontWeight:'bold' }}>Go To READ/SIGN PDF</Text>
             </TouchableOpacity>
 
         </View>
