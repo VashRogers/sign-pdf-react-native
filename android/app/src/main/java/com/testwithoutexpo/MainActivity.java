@@ -1,4 +1,4 @@
-package com.testwithoutexpo;
+package com.test_without_expo;
 import expo.modules.ReactActivityDelegateWrapper;
 
 import com.facebook.react.ReactActivity;
@@ -15,7 +15,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "TestWithoutExpo";
+    return "test_without_expo";
   }
 
   /**
