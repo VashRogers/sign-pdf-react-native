@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "TestWithoutExpo.app"
-               BlueprintName = "TestWithoutExpo"
-               ReferencedContainer = "container:TestWithoutExpo.xcodeproj">
+               BuildableName = "test_without_expo.app"
+               BlueprintName = "test_without_expo"
+               ReferencedContainer = "container:test_without_expo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "TestWithoutExpoTests.xctest"
-               BlueprintName = "TestWithoutExpoTests"
-               ReferencedContainer = "container:TestWithoutExpo.xcodeproj">
+               BuildableName = "test_without_expoTests.xctest"
+               BlueprintName = "test_without_expoTests"
+               ReferencedContainer = "container:test_without_expo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "TestWithoutExpo.app"
-            BlueprintName = "TestWithoutExpo"
-            ReferencedContainer = "container:TestWithoutExpo.xcodeproj">
+            BuildableName = "test_without_expo.app"
+            BlueprintName = "test_without_expo"
+            ReferencedContainer = "container:test_without_expo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "TestWithoutExpo.app"
-            BlueprintName = "TestWithoutExpo"
-            ReferencedContainer = "container:TestWithoutExpo.xcodeproj">
+            BuildableName = "test_without_expo.app"
+            BlueprintName = "test_without_expo"
+            ReferencedContainer = "container:test_without_expo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

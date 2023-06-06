@@ -22,7 +22,7 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
-target 'TestWithoutExpo' do
+target 'test_without_expo' do
   use_expo_modules!
   post_integrate do |installer|
     begin
@@ -52,7 +52,7 @@ target 'TestWithoutExpo' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  target 'TestWithoutExpoTests' do
+  target 'test_without_expoTests' do
     inherit! :complete
     # Pods for testing
   end

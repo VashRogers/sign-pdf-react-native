@@ -104,9 +104,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.testwithoutexpo"
+    namespace "com.test_without_expo"
     defaultConfig {
-        applicationId "com.testwithoutexpo"
+        applicationId "com.test_without_expo"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

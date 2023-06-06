@@ -1,4 +1,4 @@
-package com.testwithoutexpo;
+package com.test_without_expo;
 import android.content.res.Configuration;
 import expo.modules.ApplicationLifecycleDispatcher;
 import expo.modules.ReactNativeHostWrapper;
